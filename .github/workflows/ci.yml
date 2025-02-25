@@ -29,6 +29,9 @@ jobs:
         with:
           python-version: '3.12'
           cache: 'pipenv'
+          
+      - name: Check Python version 
+        run: python --version
 
       - name: Instalar dependências
         run: |
