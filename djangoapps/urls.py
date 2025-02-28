@@ -17,8 +17,15 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from tutorpage import views
+from tutorpage.views import user_login, salvar_notas, get_notas
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.index, name='index'),
+    path('', views.home, name='home'),
+    path('login/', user_login, name='login'),
+    path('aulas/', views.aulas, name='aulas'),
+    path('materiais/', views.materiais, name='materiais'),
+    path('praticar/', views.praticar, name='praticar'),
+    path('salvar-notas/', salvar_notas, name='salvar-notas'),
+    path("get-notas/", get_notas, name="get_notas"),
 ]
