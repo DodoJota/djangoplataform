@@ -9,7 +9,7 @@ from .models import NotaAula
 # Create your views here.
 
 def home(request):
-    return render(request, 'home.html')
+    return render(request, "home.html")
 
 
 def user_login(request):
