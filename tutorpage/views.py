@@ -66,7 +66,16 @@ def materiais(request):
     return render(request, 'materiais.html')
 
 def praticar(request):
-    return render(request, 'praticar.html') 
+    return render(request, 'praticar.html')
+
+def flashcards_view(request):
+    return render(request, 'flashcards.html')
+
+def speech(request):
+    return render(request, 'speech.html')
+
+def gramatica(request):
+    return render(request, 'gramatica.html')
 
 """
 

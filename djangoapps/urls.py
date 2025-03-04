@@ -28,4 +28,7 @@ urlpatterns = [
     path('praticar/', views.praticar, name='praticar'),
     path('salvar-notas/', salvar_notas, name='salvar-notas'),
     path("get-notas/", get_notas, name="get_notas"),
+    path('flashcards/', views.flashcards_view, name='flashcards'),
+    path('speech/', views.speech, name='speech'),
+    path('gramatica/', views.gramatica, name='gramatica'),
 ]
