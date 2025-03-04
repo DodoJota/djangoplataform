@@ -27,7 +27,7 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', cast=bool)
 
-ALLOWED_HOSTS = ["langlearning-a02e12f70f22.herokuapp.com"]
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'djangoapps.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',  # Caminho do banco de dados SQLite
     }
 }
 
