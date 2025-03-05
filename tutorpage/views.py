@@ -77,11 +77,10 @@ def speech(request):
 def gramatica(request):
     return render(request, 'gramatica.html')
 
-"""
-
 def register(request):
+    return render(request, 'register.html')
 
-
+"""
 def lives(request):
 
 """

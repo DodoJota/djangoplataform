@@ -17,7 +17,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from tutorpage import views
-from tutorpage.views import user_login, salvar_notas, get_notas
+from tutorpage.views import user_login, salvar_notas, get_notas, register
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -29,6 +31,12 @@ urlpatterns = [
     path('salvar-notas/', salvar_notas, name='salvar-notas'),
     path("get-notas/", get_notas, name="get_notas"),
     path('flashcards/', views.flashcards_view, name='flashcards'),
-    path('speech/', views.speech, name='speech'),
+    path('register/', register, name='register'),
     path('gramatica/', views.gramatica, name='gramatica'),
+    path('speech/', views.speech, name='speech'),
+    path('speech/', views.speech, name='speech')
+
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
